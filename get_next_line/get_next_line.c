@@ -90,18 +90,3 @@ char	*get_next_line(int fd)
 	saved = trim_saved(saved);
 	return (line);
 }
-
-int main(void)
-{
-	char	*line;
-	int		fd;
-
-	fd = open("get_next_line.c", O_RDONLY);
-	while ((line = get_next_line(fd)))
-	{
-		printf("%s", line);
-		free(line);
-	}
-	printf("%s", line);
-	return (0);
-}
